@@ -1,3 +1,4 @@
+import { getLatestNews } from "./../../api/apiInfo";
 import { combineReducers } from "redux";
 import { INCREASE_COUNT, DECREASE_COUNT } from "../constants";
 
@@ -15,7 +16,6 @@ const counterReducer = (state = initialState, action: any) => {
       return { ...state, count: state.count + 1 };
     case DECREASE_COUNT:
       return { ...state, count: state.count - 1 };
-    default:
       return state;
   }
 };
