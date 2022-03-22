@@ -1,11 +1,9 @@
-import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   decreaseCount,
   increaseCount,
   getLatestNews,
 } from "./redux/actions/actionCreatot";
-import { InitialStateType } from "./redux/reducers/counterReducer";
 import { RootState } from "./redux/store";
 
 const App = () => {

@@ -1,13 +1,19 @@
-import { applyMiddleware, createStore, compose } from "redux";
-import reducer from "./reducers/counterReducer";
+import { applyMiddleware, createStore, compose, combineReducers } from "redux";
+import { counterReducer } from "./reducers/counterReducer";
 import createSagaMiddleware from "redux-saga";
-import rootSaga from "./sagas";
+import rootSaga from "./sagas/sagaInfo";
+import { newsReducer } from "./reducers/newsReducer";
 
 //middleware
 const composeEnhancers =
   (window as any).__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const sagaMiddleware = createSagaMiddleware();
+
+const reducer = combineReducers({
+  counter: counterReducer,
+  news: newsReducer,
+});
 
 const configureStore = (preloadedState: any) =>
   createStore(
