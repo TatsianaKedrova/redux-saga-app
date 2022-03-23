@@ -5,11 +5,16 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import store from "./redux/store";
+import RootThemeProvider from "./RootThemeProvider";
+import { CssBaseline } from "@mui/material";
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <RootThemeProvider>
+        <CssBaseline />
+        <App />
+      </RootThemeProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById("root")
