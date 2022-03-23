@@ -31,7 +31,7 @@ const RootThemeProvider: FC<RootThemeProps> = (props) => {
         main: "#DE7212",
       },
       neutral: {
-        main: "#D0CFCF",
+        main: "#D1CFCE",
       },
       contrastThreshold: 3,
       tonalOffset: 0.3,
